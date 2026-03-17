@@ -1,4 +1,7 @@
 To launch th programm use as Arguments : 
 - add
 - list
-- mod (not in this version) 
+- mod (not in this version)
+
+For the first connexion creat a new password. 
+Everytime you connect, enter password as it asked 
