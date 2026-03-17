@@ -1,4 +1,4 @@
-To launch th program use as Arguments : 
+To launch the program use as Arguments : 
 - add
 - list
 - mod (not in this version)
