@@ -6,7 +6,7 @@
 /*   By: novella <novella@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 16:36:16 by novella           #+#    #+#             */
-/*   Updated: 2026/03/25 15:27:58 by novella          ###   ########.fr       */
+/*   Updated: 2026/03/25 22:51:23 by novella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ int verif_format(char *site);
 int list_credential();
 int connexion(char *str);
 char *first_connexion();
-unsigned char *encrypt_password(char *password);
+char *encrypt_password_main(char *password);
+char *decrypted_password_main(char *password_entered);
+int is_first_connexion();
 #endif

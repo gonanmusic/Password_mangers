@@ -6,7 +6,7 @@
 /*   By: novella <novella@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 16:36:25 by novella           #+#    #+#             */
-/*   Updated: 2026/03/25 14:08:33 by novella          ###   ########.fr       */
+/*   Updated: 2026/03/25 22:49:56 by novella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 int connexion(char *str)
 {
     int fd;
-    char stored[256];
+    char stored[129];
     int i;
     ssize_t len;
 
@@ -42,8 +42,10 @@ int connexion(char *str)
     stored[i] = '\0';
 
     close(fd);
+    
+    char *hash = decrypted_password_main(str);
 
-    if (ft_strcmp(str, stored) == 0)
+    if (ft_strcmp(hash, stored) == 0)
         return (0);
     return (1);
 }

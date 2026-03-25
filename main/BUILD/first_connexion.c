@@ -6,7 +6,7 @@
 /*   By: novella <novella@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 16:36:29 by novella           #+#    #+#             */
-/*   Updated: 2026/03/18 13:31:39 by novella          ###   ########.fr       */
+/*   Updated: 2026/03/25 23:01:23 by novella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,11 @@ char *first_connexion()
     }
     final_password[j] = '\0';
 
-    write(fd, final_password, j);
+    char *final_password_encrypted = encrypt_password_main(final_password);
+
+    write(fd, final_password_encrypted, ft_strlen(final_password_encrypted));
     write(fd, "\n", 1);
     close(fd);
-
-    return (final_password);
+    
+    return (final_password_encrypted);
 }
